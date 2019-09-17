@@ -14,7 +14,7 @@ const loadDataMock = () => {
       const data = {
         "RADIX_APP": "app_name",
         "RADIX_CLUSTERNAME": "dev-1",
-        "RADIX_COMPONENT": "echo",
+        "RADIX_COMPONENT": "echoknyt",
         "RADIX_ENVIRONMENT": "development",
         "HOSTNAME":"my-computer",
         "HOSTPLATFORM":"mac",

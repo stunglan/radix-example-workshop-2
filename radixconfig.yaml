@@ -1,7 +1,7 @@
 apiVersion: radix.equinor.com/v1
 kind: RadixApplication
 metadata:
-  name: echo
+  name: echoknyt
 spec:
   environments:
     - name: development
@@ -24,7 +24,7 @@ spec:
             limits:
               memory: "54Mi"
               cpu: "20m"
-          replicas: 1
+          replicas: 2
   dnsAppAlias:
     environment: development
     component: www
