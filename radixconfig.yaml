@@ -25,6 +25,43 @@ spec:
               memory: "54Mi"
               cpu: "20m"
           replicas: 2
+        - environment: qa
+          monitoring: false
+          resources:
+            requests:
+              memory: "50Mi"
+              cpu: "10m"
+            limits:
+              memory: "54Mi"
+              cpu: "20m"
+          replicas: 2
+    - name: echo
+      src: ./echo
+      publicPort: http
+      ports:
+       - name: http
+         port: 3001
+      environmentConfig:
+        - environment: development
+          monitoring: false
+          resources:
+            requests:
+              memory: "50Mi"
+              cpu: "10m"
+            limits:
+              memory: "54Mi"
+              cpu: "20m"
+          replicas: 2
+        - environment: qa
+          monitoring: false
+          resources:
+            requests:
+              memory: "50Mi"
+              cpu: "10m"
+            limits:
+              memory: "54Mi"
+              cpu: "20m"
+          replicas: 2
   dnsAppAlias:
     environment: development
     component: www
